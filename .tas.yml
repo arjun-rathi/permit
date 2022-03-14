@@ -2,8 +2,10 @@
 framework: mocha
 preRun:
      command:
+        - yarn run clean
         - yarn install
-        - yarn build && yarn lint
+        - yarn build
+        - yarn lint
 preMerge:
   pattern:
     - "./test/index.js"
