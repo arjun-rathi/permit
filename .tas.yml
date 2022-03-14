@@ -1,0 +1,16 @@
+---
+framework: mocha
+preRun:
+     command:
+        - yarn build && yarn lint
+preMerge:
+  pattern:
+    - "./test/index.js"
+postMerge:
+  pattern:
+    - "./test/index.js"
+postRun:
+     command:
+        - node --version
+configFile: "mocha.opts"
+version: 1.0
