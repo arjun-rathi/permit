@@ -2,6 +2,7 @@
 framework: mocha
 preRun:
      command:
+        - yarn install
         - yarn build && yarn lint
 preMerge:
   pattern:
@@ -12,5 +13,5 @@ postMerge:
 postRun:
      command:
         - node --version
-configFile: "mocha.opts"
+configFile: mocha.opts
 version: 1.0
