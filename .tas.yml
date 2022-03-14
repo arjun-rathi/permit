@@ -5,7 +5,6 @@ preRun:
         - yarn run clean
         - yarn install
         - yarn build
-        - yarn lint
 preMerge:
   pattern:
     - "./test/index.js"
